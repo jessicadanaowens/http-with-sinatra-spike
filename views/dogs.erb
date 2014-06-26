@@ -1,0 +1,16 @@
+<h1>Welcome to the Dog Directory!</h1>
+
+<p><%= "We have lots of dogs for adoption, including #{selected_dogs}"%></p>
+
+<a href='/'>Go back to root</a>
+
+<%selected_dogs.each_with_index do |dog, index| %>
+  <li>
+    <a href= "/dogs/<%=dog%>"> <%=dog%> </a>
+  </li>
+  <%end%>
+
+<form>
+  <input><%=gets.chomp%></input>
+  <button>search</button>
+</form>
